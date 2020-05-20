@@ -1,6 +1,19 @@
 import React from 'react';
 import './App.css';
+import {
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 
+
+import Home from './components/home';
+import Helsinki from './components/helsinki';
+import Tampere from './components/tampere';
+import Turku from './components/turku';
+import Oulu from './components/oulu';
+import Kuopio from './components/kuopio';
+import Joensuu from './components/joensuu';
 
 function App() {
   return (
@@ -9,33 +22,20 @@ function App() {
         
       </header>
       <div className="App-body">
-          <h1>Welcome to City Tour Booking</h1>
+          
+            
 
-          <div class="row">
-            <div class="column">
-            <button><img src="./helsinki.jpg" alt="my image" />Helsinki</button>
+          <Switch>
+            <Route exact path="/"  component={Home} />
+            <Route path="/helsinki" component={Helsinki} />
+            <Route path="/tampere" component={Tampere} />
+            <Route path="/turku" component={Turku} />
+            <Route path="/oulu" component={Oulu} />
+            <Route path="/kuopio" component={Kuopio} />
+            <Route path="/joensuu" component={Joensuu} />
             
-            </div>
-            <div class="column">
-            <button><img src="./tampere.jpg" alt="my image" /> Tampere</button>
-            </div>
-            <div class="column">
-            <button><img src="./turku.jpg" alt="my image" />Turku</button>
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="column">
-            <button><img src="./oulu.jpg" alt="my image" />Oulu</button>
-            </div>
-            <div class="column">
-            <button><img src="./kuopio.jpg" alt="my image" />Kuopio</button>
-            </div>
-            <div class="column">
-            <button><img src="./joensuu.jpg" alt="my image" />Joensuu</button>
-            </div>
-          </div>
-            
+            <Redirect to="/" />
+          </Switch>
 
           <script src="/__/firebase/7.14.4/firebase-app.js"></script>
           <script src="/__/firebase/7.14.4/firebase-analytics.js"></script>
