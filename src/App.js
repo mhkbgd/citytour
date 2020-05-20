@@ -14,6 +14,7 @@ import Turku from './components/turku';
 import Oulu from './components/oulu';
 import Kuopio from './components/kuopio';
 import Joensuu from './components/joensuu';
+import Book from './components/book';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       </header>
       <div className="App-body">
           
-            
+    
 
           <Switch>
             <Route exact path="/"  component={Home} />
@@ -33,7 +34,7 @@ function App() {
             <Route path="/oulu" component={Oulu} />
             <Route path="/kuopio" component={Kuopio} />
             <Route path="/joensuu" component={Joensuu} />
-            
+            <Route path="/book" component={Book} />
             <Redirect to="/" />
           </Switch>
 
