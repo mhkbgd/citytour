@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,9 +23,31 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
+}
+img { 
+  width: 500px; 
+  height: 250px; 
+  object-fit: contain; 
+  
+} 
+button {
+  cursor:pointer;
+  font-size: large;
+  font-weight: bold;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @keyframes App-logo-spin {
