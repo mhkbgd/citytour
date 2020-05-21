@@ -42,6 +42,13 @@ function App() {
           <script src="/__/firebase/7.14.4/firebase-analytics.js"></script>
           <script src="/__/firebase/init.js"></script>
       </div>
+
+      <footer>
+        <address>
+          Postal Address: Ida Aalbergin Tie 1 A, Helsinki, Finland, 00400.
+        </address>
+        <p>Copyright © 2020 All rights reserved.</p>
+      </footer>
       
     </div>
 
